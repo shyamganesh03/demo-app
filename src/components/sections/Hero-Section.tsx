@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import ProfileImage from '@/assets/shyamganesh.jpg';
 import { Label } from '@/components/ui/label';
 import Image from 'next/image';
-import TextReveal from './animation/text-reveal';
+import TextReveal from '../animation/text-reveal';
 
 function HeroSection() {
   return (
@@ -25,9 +25,9 @@ function HeroSection() {
           <Label className='text-xl text-primary'>SHYAM GANESH</Label>
         </TextReveal>
         <TextReveal>
-          <div className='flex flex-row gap-2'>
+          <div className='flex flex-row items-center gap-2'>
             <MapPin className='h-4 w-4 cursor-pointer duration-300 hover:scale-125' />
-            <Label>Bangalore</Label>
+            <Label className=''>Bangalore</Label>
           </div>
         </TextReveal>
 

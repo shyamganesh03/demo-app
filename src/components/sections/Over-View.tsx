@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Label } from './ui/label';
-import TextReveal from './animation/text-reveal';
+import { Label } from '../ui/label';
+import TextReveal from '../animation/text-reveal';
 
 const OverView = () => {
   return (

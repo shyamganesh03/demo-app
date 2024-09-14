@@ -1,10 +1,9 @@
 import { Label } from '@/components/ui/label';
 import { ThemeSwitch } from '@/lib/components/theme-switcher';
-
-import HeroSection from '@/components/Hero-Section';
-import MotionWrap from '@/components/animation/motaion-wrap';
-import OverView from '@/components/Over-View';
-import TechStack from '@/components/TechStack';
+import HeroSection from '@/components/sections/Hero-Section';
+import MotionWrap from '@/components/animation/motion-wrap';
+import OverView from '@/components/sections/Over-View';
+import TechStack from '@/components/sections/TechStack';
 
 const Home = () => {
   return (

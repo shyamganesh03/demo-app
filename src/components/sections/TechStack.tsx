@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import { Label } from './ui/label';
-import TextReveal from './animation/text-reveal';
+import { Label } from '../ui/label';
+import TextReveal from '../animation/text-reveal';
 import { ChevronRight } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import List from './ui/list';
+import List from '../ui/list';
 
 const TechStack = () => {
   const techStack = [
-    'React Js',
     'React Native',
+    'React Js',
     'Next Js',
-    'Nest js',
+    'Nest Js',
     'MongoDB',
   ];
   return (
