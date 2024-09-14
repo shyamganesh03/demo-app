@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { InstagramLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import { Mail, MapPin, Phone } from 'lucide-react';
@@ -8,12 +10,16 @@ import TextReveal from './animation/text-reveal';
 
 function HeroSection() {
   return (
-    <div className='flex w-full flex-row items-center justify-center gap-9 p-4'>
-      <Image
-        src={ProfileImage}
-        alt={'Image-not-found'}
-        className='h-[100px] w-[100px] rounded-lg'
-      />
+    <div className='flex w-full flex-row items-center justify-center gap-9'>
+      <div className='overflow-hidden rounded-full border border-primary p-1'>
+        <Image
+          src={ProfileImage}
+          alt={'Image-not-found'}
+          objectFit='contain'
+          className='h-[100px] w-[100px] rounded-full'
+        />
+      </div>
+
       <div className='flex flex-col gap-3'>
         <TextReveal>
           <Label className='text-xl text-primary'>SHYAM GANESH</Label>

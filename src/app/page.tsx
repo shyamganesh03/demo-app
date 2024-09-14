@@ -3,11 +3,13 @@ import { ThemeSwitch } from '@/lib/components/theme-switcher';
 
 import HeroSection from '@/components/Hero-Section';
 import MotionWrap from '@/components/animation/motaion-wrap';
+import OverView from '@/components/Over-View';
+import TechStack from '@/components/TechStack';
 
 const Home = () => {
   return (
     <div className='flex h-screen flex-1 flex-col overflow-scroll bg-background'>
-      <div className='sticky top-0 flex w-full flex-row justify-between p-4'>
+      <div className='sticky top-0 flex w-full flex-row items-center justify-between border-b border-border p-4 shadow-sm dark:border-secondary'>
         <ThemeSwitch />
         <MotionWrap className='flex flex-row gap-4'>
           <Label className='cursor-pointer text-lg transition-all duration-200 hover:text-ring'>
@@ -24,8 +26,10 @@ const Home = () => {
           </Label>
         </MotionWrap>
       </div>
-      <div className='flex flex-1 flex-col'>
+      <div className='flex flex-1 flex-col gap-4 p-4'>
         <HeroSection />
+        <OverView />
+        <TechStack />
       </div>
     </div>
   );

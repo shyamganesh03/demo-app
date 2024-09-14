@@ -12,15 +12,12 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 export function ThemeSwitch() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Sun
-          className='h-4 w-4 cursor-pointer'
-          color={theme === 'light' ? '#76b852' : '#9795f0'}
-        />
+        <Sun className='h-4 w-4 cursor-pointer' color={'#76b852'} />
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         <DropdownMenuItem onClick={() => setTheme('light')}>
