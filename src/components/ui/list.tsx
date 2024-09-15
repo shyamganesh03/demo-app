@@ -8,7 +8,7 @@ const List = ({ label }: { label: string }) => {
   return (
     <div className='flex flex-row items-center gap-2'>
       <ChevronRight className='h-4 w-4' color={'#76b852'} />
-      <Label className='cursor-pointer text-sm hover:underline'>{label}</Label>
+      <Label className='text-sm'>{label}</Label>
     </div>
   );
 };
