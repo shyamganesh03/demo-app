@@ -10,16 +10,23 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Label } from '@/components/ui/label';
+import { capitalizeFirstLetter } from '../utils';
 
 export function ThemeSwitch() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme }: any = useTheme();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Sun className='h-4 w-4 cursor-pointer' color={'#76b852'} />
+        <div className='item-center flex cursor-pointer flex-row gap-4'>
+          <Sun className='h-4 w-4 cursor-pointer' color={'#9795f0'} />
+          <Label className='mt-2 cursor-pointer text-secondary'>
+            {capitalizeFirstLetter(theme)}
+          </Label>
+        </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align='end'>
+      <DropdownMenuContent>
         <DropdownMenuItem onClick={() => setTheme('light')}>
           Light
         </DropdownMenuItem>

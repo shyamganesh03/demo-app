@@ -10,7 +10,10 @@ import TextReveal from '../animation/text-reveal';
 
 function HeroSection() {
   return (
-    <div className='flex w-full flex-row items-center justify-center gap-9'>
+    <div
+      className='flex w-full flex-row items-center justify-center gap-9'
+      id='about'
+    >
       <div className='overflow-hidden rounded-full border border-primary p-1'>
         <Image
           src={ProfileImage}
@@ -23,6 +26,9 @@ function HeroSection() {
       <div className='flex flex-col gap-3'>
         <TextReveal>
           <Label className='text-xl text-primary'>SHYAM GANESH</Label>
+        </TextReveal>
+        <TextReveal>
+          <Label className='text-xl'>Full Stack Developer</Label>
         </TextReveal>
         <TextReveal>
           <div className='flex flex-row items-center gap-2'>

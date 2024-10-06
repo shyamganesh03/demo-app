@@ -1,43 +1,44 @@
 import React from 'react';
 import AccordionComponent from '../accordion';
 import { Label } from '../ui/label';
+import TextReveal from '../animation/text-reveal';
 
 const Education = () => {
   const content: any = [
     {
       title: 'B.Tech in Information Technology',
       content: (
-        <div>
+        <TextReveal>
           <Label>
             Anjalai Ammal Mahalingam Engineering College, Thiruvarur : 2019 -
             2022
           </Label>
-        </div>
+        </TextReveal>
       ),
     },
     {
       title: 'Diploma in Electrical and Electronics Engineering (DEEE)',
       content: (
-        <div>
+        <TextReveal>
           <Label>
             Shanmugha Polytechnic Engineering College, Thanjavur : 2016 - 2019
           </Label>
-        </div>
+        </TextReveal>
       ),
     },
     {
       title: 'SSLC',
       content: (
-        <div>
+        <TextReveal>
           <Label>
             Maxwell Matric Higher Secondary School, Thanjavur : 2015 - 2016
           </Label>
-        </div>
+        </TextReveal>
       ),
     },
   ];
   return (
-    <div className='flex flex-col gap-4' id='education'>
+    <div className='flex flex-col' id='education'>
       <Label className='text-xl text-primary'>Education</Label>
       <AccordionComponent accordionItems={content} />
     </div>

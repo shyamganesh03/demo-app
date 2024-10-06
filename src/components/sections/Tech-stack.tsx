@@ -16,13 +16,16 @@ const TechStack = () => {
     'MongoDB',
   ];
   return (
-    <div className='flex flex-col gap-4' id='tech-stack'>
+    <div className='flex flex-col gap-2' id='tech-stack'>
       <Label className='text-xl text-primary'>Tech Stack</Label>
-      <TextReveal>
-        {techStack.map((techName) => {
-          return <List label={techName} key={techName} />;
-        })}
-      </TextReveal>
+
+      {techStack.map((techName, index) => {
+        return (
+          <TextReveal key={index}>
+            <List label={techName} key={techName} />
+          </TextReveal>
+        );
+      })}
     </div>
   );
 };

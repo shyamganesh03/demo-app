@@ -2,6 +2,7 @@ import React from 'react';
 import AccordionComponent from '../accordion';
 import { Label } from '../ui/label';
 import List from '../ui/list';
+import TextReveal from '../animation/text-reveal';
 
 const Career = () => {
   const workInfo = [
@@ -18,19 +19,21 @@ const Career = () => {
     {
       title: 'Incresco Technology Solutions Private Limited, Bangalore',
       content: (
-        <div>
-          <Label>Software Engineer | Jan 2022 - Present</Label>
+        <TextReveal>
+          <Label className='opacity-50'>
+            Software Engineer | Jan 2022 - Present
+          </Label>
           <div className='mt-4'>
             {workInfo.map((workItem) => {
               return <List label={workItem} />;
             })}
           </div>
-        </div>
+        </TextReveal>
       ),
     },
   ];
   return (
-    <div className='flex flex-col gap-4' id='career'>
+    <div className='flex flex-col' id='career'>
       <Label className='text-xl text-primary'>Career</Label>
       <AccordionComponent accordionItems={content} />
     </div>

@@ -16,7 +16,7 @@ const AccordionComponent = ({ accordionItems }: AccordionComponentProps) => {
       {accordionItems?.map((accordionItem) => {
         return (
           <AccordionItem value={accordionItem.title} className='border-primary'>
-            <AccordionTrigger className='hover:no-underline'>
+            <AccordionTrigger className='text-left hover:no-underline'>
               {accordionItem.title}
             </AccordionTrigger>
             <AccordionContent>{accordionItem.content}</AccordionContent>
