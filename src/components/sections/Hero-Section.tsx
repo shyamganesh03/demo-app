@@ -7,6 +7,8 @@ import ProfileImage from '@/assets/shyamganesh.jpg';
 import { Label } from '@/components/ui/label';
 import Image from 'next/image';
 import TextReveal from '../animation/text-reveal';
+import Link from 'next/link';
+import MailPopup from '../pop-up/Mail-popup';
 
 function HeroSection() {
   return (
@@ -38,10 +40,16 @@ function HeroSection() {
         </TextReveal>
 
         <div className='flex flex-row gap-2'>
-          <Phone className='h-4 w-4 cursor-pointer duration-300 hover:scale-125' />
-          <Mail className='h-4 w-4 cursor-pointer duration-300 hover:scale-125' />
-          <LinkedInLogoIcon className='h-4 w-4 cursor-pointer duration-300 hover:scale-125' />
-          <InstagramLogoIcon className='h-4 w-4 cursor-pointer duration-300 hover:scale-125' />
+          <Link href={`https://wa.me/9677316806`} target='_blank'>
+            <Phone className='h-4 w-4 cursor-pointer duration-300 hover:scale-125' />
+          </Link>
+          <MailPopup />
+          <Link
+            href={`https://www.linkedin.com/in/shyam-ganesh-ravichandran-fullstack/`}
+            target='_blank'
+          >
+            <LinkedInLogoIcon className='h-4 w-4 cursor-pointer duration-300 hover:scale-125' />
+          </Link>
         </div>
       </div>
     </div>
