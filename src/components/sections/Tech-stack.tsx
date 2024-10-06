@@ -3,8 +3,6 @@
 import React from 'react';
 import { Label } from '../ui/label';
 import TextReveal from '../animation/text-reveal';
-import { ChevronRight } from 'lucide-react';
-import { useTheme } from 'next-themes';
 import List from '../ui/list';
 
 const TechStack = () => {

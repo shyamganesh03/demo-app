@@ -47,8 +47,8 @@ const Project = () => {
             React Native, AWS Lambda | January 2022 – May 2023
           </Label>
           <div className='mt-4'>
-            {edvanza.map((workItem) => {
-              return <List label={workItem} />;
+            {edvanza.map((workItem, index) => {
+              return <List label={workItem} key={`edvanza-${index}`} />;
             })}
           </div>
         </TextReveal>
@@ -60,8 +60,10 @@ const Project = () => {
         <TextReveal>
           <Label className='opacity-50'>Edvanza Marketing Site</Label>
           <div className='mt-4'>
-            {edvanzaMarketing.map((workItem) => {
-              return <List label={workItem} />;
+            {edvanzaMarketing.map((workItem, index) => {
+              return (
+                <List label={workItem} key={`edvanza-marketing-${index}`} />
+              );
             })}
           </div>
         </TextReveal>
@@ -75,8 +77,8 @@ const Project = () => {
             React-Native, React Js, Nest JS and AWS | June 2023 - Dec 2023
           </Label>
           <div className='mt-4'>
-            {apphero.map((workItem) => {
-              return <List label={workItem} />;
+            {apphero.map((workItem, index) => {
+              return <List label={workItem} key={`apphero-${index}`} />;
             })}
           </div>
         </TextReveal>
@@ -90,8 +92,8 @@ const Project = () => {
             Astro js, Nest js | Jan 2024 - April 2024
           </Label>
           <div className='mt-4'>
-            {campus.map((workItem) => {
-              return <List label={workItem} />;
+            {campus.map((workItem, index) => {
+              return <List label={workItem} key={`campus-${index}`} />;
             })}
           </div>
         </TextReveal>
@@ -105,8 +107,8 @@ const Project = () => {
             Astro with React, Tailwind CSS, and Storyblok | May 2024 - June 2024
           </Label>
           <div className='mt-4'>
-            {collegeSite.map((workItem) => {
-              return <List label={workItem} />;
+            {collegeSite.map((workItem, index) => {
+              return <List label={workItem} key={`AAMEC-${index}`} />;
             })}
           </div>
         </TextReveal>
@@ -120,8 +122,8 @@ const Project = () => {
             React-Native and Firebase | June 2024 - July 2024
           </Label>
           <div className='mt-4'>
-            {izzo.map((workItem) => {
-              return <List label={workItem} />;
+            {izzo.map((workItem, index) => {
+              return <List label={workItem} key={`Izzo-${index}`} />;
             })}
           </div>
         </TextReveal>

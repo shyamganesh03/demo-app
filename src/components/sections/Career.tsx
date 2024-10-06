@@ -24,8 +24,8 @@ const Career = () => {
             Software Engineer | Jan 2022 - Present
           </Label>
           <div className='mt-4'>
-            {workInfo.map((workItem) => {
-              return <List label={workItem} />;
+            {workInfo.map((workItem, index) => {
+              return <List label={workItem} key={`career-${index}`} />;
             })}
           </div>
         </TextReveal>

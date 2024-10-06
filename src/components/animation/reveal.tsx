@@ -1,12 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import {
-  motion,
-  useInView,
-  useAnimation,
-  HTMLMotionProps,
-} from 'framer-motion';
+import { motion, useAnimation, HTMLMotionProps } from 'framer-motion';
 
 interface RevealProps extends HTMLMotionProps<'span'> {
   children: React.ReactNode;
@@ -19,24 +14,18 @@ const Reveal: React.FC<RevealProps> = ({
   ...props
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isInView) {
-      mainControls.start('visible');
-    } else {
-      mainControls.start('hidden');
-    }
-  }, [isInView, mainControls]);
+    mainControls.start('visible');
+  }, []);
 
   return (
     <span
       ref={ref}
       style={{
         position: 'relative',
-        display: 'inline-flex', // inline-flex gives opacity cool
-        // verticalAlign: 'top',
+        display: 'inline-flex',
         width: width,
         overflow: 'hidden',
       }}

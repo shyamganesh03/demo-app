@@ -13,9 +13,13 @@ interface AccordionComponentProps {
 const AccordionComponent = ({ accordionItems }: AccordionComponentProps) => {
   return (
     <Accordion type='single' collapsible className='w-full'>
-      {accordionItems?.map((accordionItem) => {
+      {accordionItems?.map((accordionItem, index) => {
         return (
-          <AccordionItem value={accordionItem.title} className='border-primary'>
+          <AccordionItem
+            value={accordionItem.title}
+            className='border-primary'
+            key={index}
+          >
             <AccordionTrigger className='text-left hover:no-underline'>
               {accordionItem.title}
             </AccordionTrigger>

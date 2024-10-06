@@ -11,15 +11,20 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(request: Request) {
-  const res = await request.json();
-  const { from, subject, template } = res;
-  await transporter.sendMail({
-    from: from, // sender address
-    to: 'shyamganesh', // list of receivers
-    subject: subject, // Subject line
-    html: template, // html body
-  });
-  return NextResponse.json({
-    message: 'success',
-  });
+  try {
+    const res = await request.json();
+    const { email, subject, template } = res;
+    const response = await transporter.sendMail({
+      from: email,
+      to: 'shyamganeshravichandran@gmail.com',
+      subject: subject,
+      html: template,
+    });
+    console.log({ response });
+    return NextResponse.json({
+      message: 'success',
+    });
+  } catch (error) {
+    return NextResponse.json({ message: 'error', error }, { status: 500 });
+  }
 }

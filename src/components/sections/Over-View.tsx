@@ -7,7 +7,7 @@ import TextReveal from '../animation/text-reveal';
 const OverView = () => {
   return (
     <div className='flex flex-col gap-2' id='over-view'>
-      <Label className='text-xl text-primary'>Over View</Label>
+      <Label className='text-xl text-primary'>Overview</Label>
       <TextReveal>
         <Label className='text-sm'>
           Motivated and technically adept software engineer seeking a position
